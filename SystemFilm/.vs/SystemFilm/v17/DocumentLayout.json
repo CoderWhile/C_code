@@ -1,0 +1,175 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\code\\C\\SystemFilm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\BL.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:BL.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\DL.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:DL.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\BL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:BL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:UI.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:UI.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\DL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:DL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|D:\\code\\C\\SystemFilm\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{80D062DF-14AA-4BE1-9DAE-D75C4AFE20B6}|SystemFilm.vcxproj|solutionrelative:test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\C\\test\\2025.11.12\\Student_information\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\code\\C\\test\\2025.11.9\\Project1\\list.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 251,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DL.c",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\DL.c",
+              "RelativeDocumentMoniker": "DL.c",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\DL.c",
+              "RelativeToolTip": "DL.c",
+              "ViewState": "AgIAAOQAAAAAAAAAAAAAAO8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-02T14:19:28.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BL.c",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\BL.c",
+              "RelativeDocumentMoniker": "BL.c",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\BL.c",
+              "RelativeToolTip": "BL.c",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAmwIIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-02T14:19:15.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\code\\C\\test\\2025.11.12\\Student_information\\test.c",
+              "RelativeDocumentMoniker": "..\\test\\2025.11.12\\Student_information\\test.c",
+              "ToolTip": "D:\\code\\C\\test\\2025.11.12\\Student_information\\test.c",
+              "RelativeToolTip": "..\\test\\2025.11.12\\Student_information\\test.c",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAgwD4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-05T08:57:44.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\test.c",
+              "RelativeDocumentMoniker": "test.c",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\test.c",
+              "RelativeToolTip": "test.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-02T14:18:11.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DL.h",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\DL.h",
+              "RelativeDocumentMoniker": "DL.h",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\DL.h",
+              "RelativeToolTip": "DL.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-02T14:17:55.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "list.c",
+              "DocumentMoniker": "D:\\code\\C\\test\\2025.11.9\\Project1\\list.c",
+              "RelativeDocumentMoniker": "..\\test\\2025.11.9\\Project1\\list.c",
+              "ToolTip": "D:\\code\\C\\test\\2025.11.9\\Project1\\list.c",
+              "RelativeToolTip": "..\\test\\2025.11.9\\Project1\\list.c",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-05T08:57:56.761Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UI.c",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\UI.c",
+              "RelativeDocumentMoniker": "UI.c",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\UI.c",
+              "RelativeToolTip": "UI.c",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-03-02T14:18:31.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BL.h",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\BL.h",
+              "RelativeDocumentMoniker": "BL.h",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\BL.h",
+              "RelativeToolTip": "BL.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-02T14:17:39.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UI.h",
+              "DocumentMoniker": "D:\\code\\C\\SystemFilm\\UI.h",
+              "RelativeDocumentMoniker": "UI.h",
+              "ToolTip": "D:\\code\\C\\SystemFilm\\UI.h",
+              "RelativeToolTip": "UI.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-03-02T14:17:21.646Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+﻿  UI.c
+D:\code\C\SystemFilm\UI.c(39,33): warning C4047: “函数”:“__int64”与“char *”的间接级别不同
+D:\code\C\SystemFilm\UI.c(39,33): warning C4024: “CheckPass”: 形参和实参 1 的类型不同
+D:\code\C\SystemFilm\UI.c(26,12): warning C4101: “tmppassword”: 未引用的局部变量
+D:\code\C\SystemFilm\UI.c(63,3): warning C4098: “RegisterShowMana”:“void”函数返回值
+D:\code\C\SystemFilm\UI.c(67,34): warning C4047: “函数”:“__int64”与“char *”的间接级别不同
+D:\code\C\SystemFilm\UI.c(67,34): warning C4024: “CheckPass”: 形参和实参 1 的类型不同
+D:\code\C\SystemFilm\UI.c(52,12): warning C4101: “tmppassword”: 未引用的局部变量
+D:\code\C\SystemFilm\UI.c(94,35): warning C4047: “函数”:“__int64”与“char *”的间接级别不同
+D:\code\C\SystemFilm\UI.c(94,35): warning C4024: “CheckPass”: 形参和实参 1 的类型不同
+D:\code\C\SystemFilm\UI.c(81,12): warning C4101: “tmppassword”: 未引用的局部变量
+  正在生成代码
+  3 of 98 functions ( 3.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  SystemFilm.vcxproj -> D:\code\C\SystemFilm\x64\Release\SystemFilm.exe

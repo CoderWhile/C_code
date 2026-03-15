@@ -1,0 +1,21 @@
+﻿  BL.c
+  UI.c
+D:\code\C\SystemFilm\BL.c(92,21): warning C4028: 形参 1 与声明不一致
+  正在生成代码...
+D:\code\C\SystemFilm\BL.c(308,4): warning C4098: “NewShowTime”:“void”函数返回值
+D:\code\C\SystemFilm\BL.c(421,4): warning C4098: “NewShowTime”:“void”函数返回值
+D:\code\C\SystemFilm\UI.c(39,33): warning C4047: “函数”:“__int64”与“char *”的间接级别不同
+D:\code\C\SystemFilm\UI.c(39,33): warning C4024: “CheckPass”: 形参和实参 1 的类型不同
+D:\code\C\SystemFilm\UI.c(26,12): warning C4101: “tmppassword”: 未引用的局部变量
+D:\code\C\SystemFilm\UI.c(63,3): warning C4098: “RegisterShowMana”:“void”函数返回值
+D:\code\C\SystemFilm\UI.c(67,34): warning C4047: “函数”:“__int64”与“char *”的间接级别不同
+D:\code\C\SystemFilm\UI.c(67,34): warning C4024: “CheckPass”: 形参和实参 1 的类型不同
+D:\code\C\SystemFilm\UI.c(52,12): warning C4101: “tmppassword”: 未引用的局部变量
+D:\code\C\SystemFilm\UI.c(94,35): warning C4047: “函数”:“__int64”与“char *”的间接级别不同
+D:\code\C\SystemFilm\UI.c(94,35): warning C4024: “CheckPass”: 形参和实参 1 的类型不同
+D:\code\C\SystemFilm\UI.c(81,12): warning C4101: “tmppassword”: 未引用的局部变量
+D:\code\C\SystemFilm\BL.c(144,1): warning C4715: “RegisterUser”: 不是所有的控件路径都返回值
+D:\code\C\SystemFilm\BL.c(167,1): warning C4715: “RegisterMana”: 不是所有的控件路径都返回值
+D:\code\C\SystemFilm\BL.c(118,1): warning C4715: “CheckPass”: 不是所有的控件路径都返回值
+D:\code\C\SystemFilm\BL.c(89,1): warning C4715: “CheckId”: 不是所有的控件路径都返回值
+  SystemFilm.vcxproj -> D:\code\C\SystemFilm\x64\Debug\SystemFilm.exe
