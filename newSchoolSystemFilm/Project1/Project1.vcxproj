@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{66b3c80e-d9eb-4e60-9a23-6f2b47799de2}</ProjectGuid>
+    <RootNamespace>Project1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Common\common.c" />
+    <ClCompile Include="..\Persistence\Account_Persistence.c" />
+    <ClCompile Include="..\Persistence\EntityKey_Persist.c" />
+    <ClCompile Include="..\Persistence\Play_Persist.c" />
+    <ClCompile Include="..\Persistence\Saleanalysis.c" />
+    <ClCompile Include="..\Persistence\Saleanalysis_Persist.c" />
+    <ClCompile Include="..\Persistence\Sale_Persist.c" />
+    <ClCompile Include="..\Persistence\Seat_Persist.c" />
+    <ClCompile Include="..\Persistence\ShowPlan_Persist.c" />
+    <ClCompile Include="..\Persistence\ShowQuery_Persist.c" />
+    <ClCompile Include="..\Persistence\StaSale_Persis.c" />
+    <ClCompile Include="..\Persistence\Studio_Persist.c" />
+    <ClCompile Include="..\Persistence\Ticket_Persist.c" />
+    <ClCompile Include="..\Service\Account.c" />
+    <ClCompile Include="..\Service\MaiAccount_UI.c" />
+    <ClCompile Include="..\Service\play.c" />
+    <ClCompile Include="..\Service\Sale.c" />
+    <ClCompile Include="..\Service\Saleanalysis.c" />
+    <ClCompile Include="..\Service\Seat.c" />
+    <ClCompile Include="..\Service\ShowPlan.c" />
+    <ClCompile Include="..\Service\ShowQuery_Srv.c" />
+    <ClCompile Include="..\Service\StaSale.c" />
+    <ClCompile Include="..\Service\Studio.c" />
+    <ClCompile Include="..\Service\Ticket.c" />
+    <ClCompile Include="..\TTMS.c" />
+    <ClCompile Include="..\View\Account_UI.c" />
+    <ClCompile Include="..\View\MaiAccount_UI.c" />
+    <ClCompile Include="..\View\Main_Menu.c" />
+    <ClCompile Include="..\View\Play_UI.c" />
+    <ClCompile Include="..\View\Saleanalysis_UI.c" />
+    <ClCompile Include="..\View\Sale_UI.c" />
+    <ClCompile Include="..\View\Seat_UI.c" />
+    <ClCompile Include="..\View\ShowPlan_UI.c" />
+    <ClCompile Include="..\View\ShowQuery_UI.c" />
+    <ClCompile Include="..\View\StaSale_UI.c" />
+    <ClCompile Include="..\View\Studio_UI.c" />
+    <ClCompile Include="..\View\Ticket_UI.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\common.h" />
+    <ClInclude Include="..\Common\List.h" />
+    <ClInclude Include="..\Common\listTestDrv.h" />
+    <ClInclude Include="..\Persistence\Account_Persistence.h" />
+    <ClInclude Include="..\Persistence\EntityKey_Persist.h" />
+    <ClInclude Include="..\Persistence\Play_Persist.h" />
+    <ClInclude Include="..\Persistence\Saleanalysis.h" />
+    <ClInclude Include="..\Persistence\Saleanalysis_Persis.h" />
+    <ClInclude Include="..\Persistence\Sale_Persist.h" />
+    <ClInclude Include="..\Persistence\Schedule_Persist.h" />
+    <ClInclude Include="..\Persistence\Seat_Persist.h" />
+    <ClInclude Include="..\Persistence\ShowPlan_Persist.h" />
+    <ClInclude Include="..\Persistence\StaSale_Persis.h" />
+    <ClInclude Include="..\Persistence\Studio_Persist.h" />
+    <ClInclude Include="..\Persistence\Ticket_Persist.h" />
+    <ClInclude Include="..\Service\Account.h" />
+    <ClInclude Include="..\Service\MaiAccount_UI.h" />
+    <ClInclude Include="..\Service\play.h" />
+    <ClInclude Include="..\Service\Sale.h" />
+    <ClInclude Include="..\Service\Seat.h" />
+    <ClInclude Include="..\Service\ShowPlan.h" />
+    <ClInclude Include="..\Service\ShowQuery.h" />
+    <ClInclude Include="..\Service\StaSales.h" />
+    <ClInclude Include="..\Service\Studio.h" />
+    <ClInclude Include="..\Service\Ticket.h" />
+    <ClInclude Include="..\View\Account_UI.h" />
+    <ClInclude Include="..\View\MaiAccount_UI.h" />
+    <ClInclude Include="..\View\Main_Menu.h" />
+    <ClInclude Include="..\View\Play_UI.h" />
+    <ClInclude Include="..\View\Saleanalysis_UI.h" />
+    <ClInclude Include="..\View\Sale_UI.h" />
+    <ClInclude Include="..\View\Schedule_UI.h" />
+    <ClInclude Include="..\View\Seat_UI.h" />
+    <ClInclude Include="..\View\ShowPlan_UI.h" />
+    <ClInclude Include="..\View\ShowQuery_UI.h" />
+    <ClInclude Include="..\View\StaSales_UI.h" />
+    <ClInclude Include="..\View\Studio_UI.h" />
+    <ClInclude Include="..\View\Ticket_UI.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
