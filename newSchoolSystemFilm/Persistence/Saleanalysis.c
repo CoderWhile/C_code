@@ -15,6 +15,8 @@
 #include "../Common/List.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include"../Persistence/Sale_Persist.h"
+#include"../Persistence/ShowPlan_Persist.h"
 #include <string.h>
 #include"Saleanalysis_Persis.h"
 
@@ -286,7 +288,7 @@ int Ticket_Srv_FetchBySchID(ticket_list_t list, int schedule_id) {
     List_Init(tickList, ticket_node_t);
 
     //从文件中载入匹配的票信息
-    count = Ticket_Srv_SelBySchID( schedule_id, tickList);
+    count =Ticket_Srv_SelBySchID( schedule_id, tickList);
 
     //判断返回值是否小于等于0
     if (count <= 0) {

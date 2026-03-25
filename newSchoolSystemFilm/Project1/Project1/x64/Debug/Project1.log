@@ -1,367 +1,110 @@
 ﻿D:\Visual Studio\Visual Studio2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1129,5): warning MSB8027: 名为 Saleanalysis.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\Persistence\Saleanalysis.c, ..\Service\Saleanalysis.c。
 D:\Visual Studio\Visual Studio2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1129,5): warning MSB8027: 名为 MaiAccount_UI.c 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 ..\Service\MaiAccount_UI.c, ..\View\MaiAccount_UI.c。
-  common.c
-  Account_Persistence.c
-D:\code\C\newSystemFilm\common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Account_Persistence.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Account_Persistence.c(49,8): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  EntityKey_Persist.c
-D:\code\C\newSystemFilm\Persistence\EntityKey_Persist.c(46,6): warning C4013: “access”未定义；假设外部返回 int
-  Play_Persist.c
-D:\code\C\newSystemFilm\common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Play_Persist.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Play_Persist.c(50,8): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  Saleanalysis.c
-D:\code\C\newSystemFilm\Persistence\Saleanalysis.c(2,9): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
-      D:\code\C\newSystemFilm\Persistence\Saleanalysis.c(1,9):
-      参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Saleanalysis.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Saleanalysis.c(206,5): warning C4013: “Schedule_Perst_SelectByPlay”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\Persistence\Saleanalysis.c(289,13): warning C4013: “Ticket_Srv_SelBySchID”未定义；假设外部返回 int
-  Saleanalysis_Persist.c
-D:\code\C\newSystemFilm\Persistence\Saleanalysis_Persist.c(2,9): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
-      D:\code\C\newSystemFilm\Persistence\Saleanalysis_Persist.c(1,9):
-      参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Saleanalysis_Persist.c”)
-  
-  Sale_Persist.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Sale_Persist.c”)
-  
-D:\code\C\newSystemFilm\common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Sale_Persist.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Sale_Persist.c(44,8): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  Seat_Persist.c
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Seat_Persist.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Seat_Persist.c(35,13): warning C4013: “EntKey_Perst_GetNewKeys”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\Persistence\Seat_Persist.c(48,8): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\code\C\newSystemFilm\Persistence\Seat_Persist.c(93,22): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-D:\code\C\newSystemFilm\Persistence\Seat_Persist.c(64,9): warning C4101: “data”: 未引用的局部变量
-  ShowPlan_Persist.c
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowPlan_Persist.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowPlan_Persist.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowPlan_Persist.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowPlan_Persist.c”)
-  
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.c(14,49): warning C4028: 形参 1 与声明不一致
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.c(49,39): warning C4028: 形参 1 与声明不一致
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.c(53,13): warning C4013: “EntKey_Perst_GetNewKeys”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.c(65,8): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  ShowQuery_Persist.c
-D:\code\C\newSystemFilm\Persistence\ShowQuery_Persist.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Service\ShowQuery.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowQuery_Persist.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowQuery_Persist.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/ShowQuery_Persist.c”)
-  
-  StaSale_Persis.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/StaSale_Persis.c”)
-  
-D:\code\C\newSystemFilm\common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/StaSale_Persis.c”)
-  
-  Studio_Persist.c
-D:\code\C\newSystemFilm\Persistence\Studio_Persist.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Studio_Persist.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Studio_Persist.c(51,8): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-  Ticket_Persist.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Ticket_Persist.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Persistence/Ticket_Persist.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Ticket_Persist.c(65,10): warning C4013: “Play_Perst_SelectByID”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\Persistence\Ticket_Persist.c(97,17): warning C4047: “=”:“int”与“int *”的间接级别不同
-D:\code\C\newSystemFilm\Persistence\Ticket_Persist.c(104,15): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
-D:\code\C\newSystemFilm\Persistence\Ticket_Persist.c(93,14): warning C4101: “ticket_data”: 未引用的局部变量
-  Account.c
-D:\code\C\newSystemFilm\Service\Account.c(41,27): warning C4090: “函数”: 不同的“const”限定符
-D:\code\C\newSystemFilm\Service\Account.c(47,27): warning C4090: “函数”: 不同的“const”限定符
-  MaiAccount_UI.c
-D:\code\C\newSystemFilm\Service\MaiAccount_UI.c(11,2): warning C4013: “strcpy”未定义；假设外部返回 int
-  play.c
-  Sale.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Service/Sale.c”)
-  
-  Saleanalysis.c
-D:\code\C\newSystemFilm\Service\Saleanalysis.c(2,9): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
-      D:\code\C\newSystemFilm\Service\Saleanalysis.c(1,9):
-      参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Service/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Service/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Service/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Persistence\Saleanalysis.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Service/Saleanalysis.c”)
-  
-D:\code\C\newSystemFilm\Service\Saleanalysis.c(206,5): warning C4013: “Schedule_Perst_SelectByPlay”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\Service\Saleanalysis.c(289,13): warning C4013: “Ticket_Srv_SelBySchID”未定义；假设外部返回 int
-  Seat.c
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../Service/Seat.c”)
-  
-D:\code\C\newSystemFilm\Service\Seat.c(24,30): warning C4090: “函数”: 不同的“const”限定符
   ShowPlan.c
-D:\code\C\newSystemFilm\Service\ShowPlan.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowPlan.c”)
   
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowPlan.c”)
   
-D:\code\C\newSystemFilm\Persistence\ShowPlan_Persist.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Persistence\ShowPlan_Persist.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowPlan.c”)
   
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowPlan.c”)
   
-D:\code\C\newSystemFilm\Service\ShowPlan.c(55,43): warning C4047: “函数”:“schedule_list_t *”与“schedule_list_t”的间接级别不同
-D:\code\C\newSystemFilm\Service\ShowPlan.c(55,43): warning C4024: “Schedule_Perst_SelectByPlay”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\Service\ShowPlan.c(76,15): warning C4013: “Schedule_Perst_SelectAll”未定义；假设外部返回 int
-  正在生成代码...
-D:\code\C\newSystemFilm\Service\Sale.c(10,1): warning C4716: “Sale_Srv_Add”: 必须返回一个值
-  正在编译...
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.c(55,43): warning C4047: “函数”:“schedule_list_t *”与“schedule_list_t”的间接级别不同
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.c(55,43): warning C4024: “Schedule_Perst_SelectByPlay”: 形参和实参 1 的类型不同
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.c(76,15): warning C4013: “Schedule_Perst_SelectAll”未定义；假设外部返回 int
   ShowQuery_Srv.c
-D:\code\C\newSystemFilm\Service\ShowQuery_Srv.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowQuery_Srv.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowQuery_Srv.c”)
   
-D:\code\C\newSystemFilm\Service\ShowQuery.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowQuery.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowQuery_Srv.c”)
   
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowQuery_Srv.c”)
   
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/ShowQuery_Srv.c”)
   
   StaSale.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/StaSale.c”)
   
-D:\code\C\newSystemFilm\common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/StaSale.c”)
   
   Studio.c
   Ticket.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/Ticket.c”)
   
-D:\code\C\newSystemFilm\Common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/Ticket.c”)
   
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../Service/Ticket.c”)
   
-D:\code\C\newSystemFilm\Service\Ticket.c(24,37): warning C4047: “函数”:“seat_list_t”与“seat_list_t *”的间接级别不同
-D:\code\C\newSystemFilm\Service\Ticket.c(24,37): warning C4024: “Seat_Srv_FetchValidByRoomID”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\Service\Ticket.c(26,9): warning C4098: “Ticket_Srv_GenBatch”:“void”函数返回值
-D:\code\C\newSystemFilm\Service\Ticket.c(40,5): warning C4098: “Ticket_Srv_GenBatch”:“void”函数返回值
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\Ticket.c(26,9): warning C4098: “Ticket_Srv_GenBatch”:“void”函数返回值
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\Ticket.c(40,5): warning C4098: “Ticket_Srv_GenBatch”:“void”函数返回值
   TTMS.c
   Account_UI.c
-D:\code\C\newSystemFilm\View\Account_UI.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Account_UI.c”)
   
-D:\code\C\newSystemFilm\View\Account_UI.c(63,11): warning C4477: “printf”: 格式字符串“%18s”需要类型“char *”的参数，但可变参数 2 拥有了类型“int”
-D:\code\C\newSystemFilm\View\Account_UI.c(63,11): warning C4313: "printf": 格式字符串中的 "%s" 与类型为 "int" 的参数 2 冲突
-D:\code\C\newSystemFilm\View\Account_UI.c(96,47): warning C4133: “函数”: 从“account_list_t”到“studio_list_t”的类型不兼容
-D:\code\C\newSystemFilm\View\Account_UI.c(114,46): warning C4133: “函数”: 从“account_list_t”到“studio_list_t”的类型不兼容
-D:\code\C\newSystemFilm\View\Account_UI.c(88,5): warning C4133: “初始化”: 从“account_node *”到“studio_node_t *”的类型不兼容
-D:\code\C\newSystemFilm\View\Account_UI.c(40,9): warning C4101: “id”: 未引用的局部变量
-D:\code\C\newSystemFilm\View\Account_UI.c(171,7): warning C4101: “newpassword”: 未引用的局部变量
-D:\code\C\newSystemFilm\View\Account_UI.c(209,10): warning C4477: “printf”: 格式字符串“%18s”需要类型“char *”的参数，但可变参数 2 拥有了类型“int”
-D:\code\C\newSystemFilm\View\Account_UI.c(209,10): warning C4313: "printf": 格式字符串中的 "%s" 与类型为 "int" 的参数 2 冲突
-  MaiAccount_UI.c
-D:\code\C\newSystemFilm\View\MaiAccount_UI.c(11,2): warning C4013: “strcpy”未定义；假设外部返回 int
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(107,47): warning C4133: “函数”: 从“account_list_t”到“studio_list_t”的类型不兼容
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(51,9): warning C4101: “id”: 未引用的局部变量
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(184,7): warning C4101: “newpassword”: 未引用的局部变量
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(222,10): warning C4477: “printf”: 格式字符串“%18s”需要类型“char *”的参数，但可变参数 2 拥有了类型“int”
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(222,10): warning C4313: "printf": 格式字符串中的 "%s" 与类型为 "int" 的参数 2 冲突
   Main_Menu.c
-D:\code\C\newSystemFilm\View\ShowQuery_UI.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\ShowQuery_UI.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Main_Menu.c”)
   
-D:\code\C\newSystemFilm\Common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Main_Menu.c”)
   
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Main_Menu.c”)
   
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Main_Menu.c(53,4): warning C4013: “StaSales_UI_MgtEntry”未定义；假设外部返回 int
   Play_UI.c
-D:\code\C\newSystemFilm\View\Play_UI.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Play_UI.c”)
   
-D:\code\C\newSystemFilm\View\Play_UI.c(12,88): warning C4474: printf: 格式字符串中传递的参数太多
-      D:\code\C\newSystemFilm\View\Play_UI.c(12,88):
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“../View/Play_UI.c”)
+  
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(14,151): warning C4474: printf: 格式字符串中传递的参数太多
+      C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(14,151):
       占位符和其参数预计 1 可变参数，但提供的却是 2 参数
   
-D:\code\C\newSystemFilm\View\Play_UI.c(39,18): warning C4101: “pos”: 未引用的局部变量
-D:\code\C\newSystemFilm\View\Play_UI.c(177,61): warning C4474: printf: 格式字符串中传递的参数太多
-      D:\code\C\newSystemFilm\View\Play_UI.c(177,61):
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(87,17): warning C4098: “Play_UI_MgtEntry”:“void”函数返回值
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(46,18): warning C4101: “pos”: 未引用的局部变量
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(521,61): warning C4474: printf: 格式字符串中传递的参数太多
+      C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Play_UI.c(521,61):
       占位符和其参数预计 0 可变参数，但提供的却是 1 参数
   
-D:\code\C\newSystemFilm\View\Play_UI.c(241,61): warning C4474: printf: 格式字符串中传递的参数太多
-      D:\code\C\newSystemFilm\View\Play_UI.c(241,61):
-      占位符和其参数预计 0 可变参数，但提供的却是 1 参数
-  
-  Saleanalysis_UI.c
-D:\code\C\newSystemFilm\View\Saleanalysis_UI.c(2,9): warning C4005: “_CRT_SECURE_NO_WARNINGS”: 宏重定义
-      D:\code\C\newSystemFilm\View\Saleanalysis_UI.c(1,9):
-      参见“_CRT_SECURE_NO_WARNINGS”的前一个定义
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/Saleanalysis_UI.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/Saleanalysis_UI.c”)
-  
-  Sale_UI.c
-D:\code\C\newSystemFilm\View\Sale_UI.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/Sale_UI.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/Sale_UI.c”)
-  
-D:\code\C\newSystemFilm\View\Sale_UI.c(123,13): warning C4013: “Play_UI_FetchByName”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\View\Sale_UI.c(37,12): warning C4101: “playid”: 未引用的局部变量
-D:\code\C\newSystemFilm\View\Sale_UI.c(40,9): warning C4101: “id”: 未引用的局部变量
-D:\code\C\newSystemFilm\View\Sale_UI.c(182,52): warning C4047: “函数”:“schedule_list_t”与“int”的间接级别不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(182,52): warning C4024: “Schedule_Srv_FetchByPlay”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(182,60): warning C4047: “函数”:“int”与“schedule_list_t”的间接级别不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(182,60): warning C4024: “Schedule_Srv_FetchByPlay”: 形参和实参 2 的类型不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(253,52): warning C4047: “函数”:“seat_list_t”与“int”的间接级别不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(253,52): warning C4024: “Seat_Srv_FetchValidByRoomID”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(253,64): warning C4047: “函数”:“int”与“seat_list_t”的间接级别不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(253,64): warning C4024: “Seat_Srv_FetchValidByRoomID”: 形参和实参 2 的类型不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(254,41): warning C4047: “函数”:“ticket_list_t”与“int”的间接级别不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(254,41): warning C4024: “Ticket_Srv_FetchBySchID”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(254,53): warning C4047: “函数”:“int”与“ticket_list_t”的间接级别不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(254,53): warning C4024: “Ticket_Srv_FetchBySchID”: 形参和实参 2 的类型不同
-D:\code\C\newSystemFilm\View\Sale_UI.c(356,9): warning C4098: “Sale_UI_ReturnTicket”:“void”函数返回值
-D:\code\C\newSystemFilm\View\Sale_UI.c(362,9): warning C4098: “Sale_UI_ReturnTicket”:“void”函数返回值
-D:\code\C\newSystemFilm\View\Sale_UI.c(392,5): warning C4098: “Sale_UI_ReturnTicket”:“void”函数返回值
-D:\code\C\newSystemFilm\View\Sale_UI.c(344,9): warning C4101: “row”: 未引用的局部变量
-D:\code\C\newSystemFilm\View\Sale_UI.c(344,14): warning C4101: “col”: 未引用的局部变量
-  Seat_UI.c
-D:\code\C\newSystemFilm\Common\list.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/Seat_UI.c”)
-  
-D:\code\C\newSystemFilm\View\Seat_UI.c(26,9): warning C4013: “strcpy”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\View\Seat_UI.c(46,9): warning C4047: “return”:“char”与“char [2]”的间接级别不同
-D:\code\C\newSystemFilm\View\Seat_UI.c(48,9): warning C4047: “return”:“char”与“char [2]”的间接级别不同
-D:\code\C\newSystemFilm\View\Seat_UI.c(50,9): warning C4047: “return”:“char”与“char [2]”的间接级别不同
-D:\code\C\newSystemFilm\View\Seat_UI.c(60,20): warning C4047: “==”:“int”与“char [2]”的间接级别不同
-D:\code\C\newSystemFilm\View\Seat_UI.c(62,25): warning C4047: “==”:“int”与“char [2]”的间接级别不同
-D:\code\C\newSystemFilm\View\Seat_UI.c(64,25): warning C4047: “==”:“int”与“char [3]”的间接级别不同
-D:\code\C\newSystemFilm\View\Seat_UI.c(269,40): warning C4133: “函数”: 从“seat_t *”到“seat_node_t *”的类型不兼容
-  ShowPlan_UI.c
-D:\code\C\newSystemFilm\Service\ShowQuery.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowPlan_UI.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowPlan_UI.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowPlan_UI.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowPlan_UI.c”)
-  
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(24,42): warning C4047: “函数”:“schedule_list_t”与“schedule_list_t *”的间接级别不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(24,42): warning C4024: “Schedule_Srv_FetchByPlay”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(64,50): warning C4047: “函数”:“schedule_list_t”与“schedule_list_t *”的间接级别不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(64,50): warning C4024: “Schedule_Srv_FetchByPlay”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(86,50): warning C4047: “函数”:“schedule_list_t”与“schedule_list_t *”的间接级别不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(86,50): warning C4024: “Schedule_Srv_FetchByPlay”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(101,50): warning C4047: “函数”:“schedule_list_t”与“schedule_list_t *”的间接级别不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(101,50): warning C4024: “Schedule_Srv_FetchByPlay”: 形参和实参 1 的类型不同
-D:\code\C\newSystemFilm\View\ShowPlan_UI.c(141,10): warning C4013: “Schedule_Srv_FetchById”未定义；假设外部返回 int
-  ShowQuery_UI.c
-D:\code\C\newSystemFilm\Service\ShowQuery.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowQuery_UI.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowQuery_UI.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowQuery_UI.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowQuery_UI.c”)
-  
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/ShowQuery_UI.c”)
-  
-D:\code\C\newSystemFilm\View\ShowQuery_UI.c(15,9): warning C4013: “Play_Perst_SelByID”未定义；假设外部返回 int
-D:\code\C\newSystemFilm\View\ShowQuery_UI.c(16,16): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 4 拥有了类型“const ttms_time_t”
-D:\code\C\newSystemFilm\View\ShowQuery_UI.c(20,16): warning C4477: “printf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 4 拥有了类型“const ttms_time_t”
-D:\code\C\newSystemFilm\View\ShowQuery_UI.c(106,30): warning C4133: “函数”: 从“char [64]”到“play_list_t”的类型不兼容
-D:\code\C\newSystemFilm\View\ShowQuery_UI.c(106,35): warning C4133: “函数”: 从“play_t *”到“char *”的类型不兼容
-  StaSale_UI.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/StaSale_UI.c”)
-  
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/StaSale_UI.c”)
-  
-D:\code\C\newSystemFilm\View\StaSale_UI.c(104,11): warning C4133: “=”: 从“account_node_t *”到“account_t *”的类型不兼容
-  Studio_UI.c
-D:\code\C\newSystemFilm\View\Studio_UI.c(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\code\C\newSystemFilm\Common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-  (编译源文件“../View/Studio_UI.c”)
-  
-D:\code\C\newSystemFilm\View\Studio_UI.c(196,2): warning C4013: “gets”未定义；假设外部返回 int
   Ticket_UI.c
-D:\code\C\newSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Ticket_UI.c”)
   
-D:\code\C\newSystemFilm\common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Service\ShowPlan.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   (编译源文件“../View/Ticket_UI.c”)
   
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\common\List.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  (编译源文件“../View/Ticket_UI.c”)
+  
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Ticket_UI.c(85,23): warning C4133: “函数”: 从“ticket_list_t”到“play_list_t”的类型不兼容
   正在生成代码...
-D:\code\C\newSystemFilm\View\Account_UI.c(195,1): warning C4715: “Account_UI_Delete”: 不是所有的控件路径都返回值
-D:\code\C\newSystemFilm\View\Account_UI.c(161,1): warning C4715: “Account_UI_Add”: 不是所有的控件路径都返回值
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(208,1): warning C4715: “Account_UI_Delete”: 不是所有的控件路径都返回值
+C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\View\Account_UI.c(174,1): warning C4715: “Account_UI_Add”: 不是所有的控件路径都返回值
 Project1\x64\Debug\Saleanalysis.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
 Project1\x64\Debug\MaiAccount_UI.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
-  Project1.vcxproj -> D:\code\C\newSystemFilm\Project1\x64\Debug\Project1.exe
+  Project1.vcxproj -> C:\Users\xiaobai\source\repos\C_code\newSchoolSystemFilm\Project1\x64\Debug\Project1.exe

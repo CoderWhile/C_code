@@ -30,14 +30,15 @@ void Main_Menu(void) {
 		printf("[P]lay Management.\n");
 		printf("[T]icket Sale.\n");
 		printf("[R]eturn Ticket.\n");
-		printf("[Q]ueries\n");
+		printf("[Q]stasals\n");
 		printf("Ra[n]king and Statistics.\n");
 		printf("[A]ccount Management.\n");
 		printf("[E]xist.\n");
 		printf("\n==================================================================\n");
 		printf("Please input your choice:");
 		fflush(stdin);
-		choice = getchar();
+		scanf(" %c", &choice);
+		//choice = getchar();
 		switch (choice) {
 		case 'S':
 		case 's':
@@ -49,7 +50,8 @@ void Main_Menu(void) {
 			break;
 		case 'Q':
 		case 'q':
-			Schedule_UI_ListAll();
+			StaSales_UI_MgtEntry();
+
 			break;
 		case 'T':
 		case 't':

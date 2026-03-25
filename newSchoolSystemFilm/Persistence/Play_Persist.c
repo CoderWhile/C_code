@@ -37,19 +37,62 @@ int Play_Perst_SelectAll(play_list_t list) {
 }
 //存储新剧目
 int Play_Perst_Insert(play_t* data) {
-	int rtn = 0;
-	long key = EntKey_Perst_GetNewKeys(PLAY_KEY_NAME, 1); //为新演出厅分配获取
-	if (key <= 0)			//主键分配失败，直接返回
-		return 0;
-	data->id = key;
-	FILE* fp = fopen("Play.dat", "ab");
-	if (fp == NULL) {
-		printf("打开失败\n");
+	// 1. 校验入参合法性（避免空指针/非法ID导致添加失败）
+	if (data == NULL) {
+		printf("Error: Invalid play data (NULL pointer)!\n");
 		return 0;
 	}
-	rtn = fwrite(data, sizeof(play_t), 1, fp);
-	fclose(fp);
-	return rtn;
+
+	// 2. 保留用户输入的ID（不再强制覆盖），仅当ID≤0时自动分配
+	long key = data->id;
+	if (key <= 0) {
+		key = EntKey_Perst_GetNewKeys(PLAY_KEY_NAME, 1); // 自动分配ID
+		if (key <= 0) { // 主键分配失败，提示并返回
+			printf("Error: Failed to allocate new play ID!\n");
+			return 0;
+		}
+		data->id = key; // 赋值自动分配的ID
+	}
+
+	int retryCount = 3; // 最多重试3次
+	FILE* fp = NULL;
+	int rtn = 0;
+
+	while (retryCount > 0) {
+		fp = fopen("Play.dat", "ab"); // 以追加二进制模式打开
+		if (fp != NULL) {
+			// 4. 写入数据并校验写入结果
+			rtn = fwrite(data, sizeof(play_t), 1, fp);
+			if (rtn != 1) {
+				printf("Error: Failed to write play data to file (retry %d times left)!\n", retryCount - 1);
+			}
+			else {
+				break; // 写入成功，退出重试
+			}
+			fclose(fp);
+			retryCount--;
+		}
+		else {
+			printf("Error: Failed to open Play.dat (retry %d times left)!\n", retryCount - 1);
+			retryCount--;
+			// 短暂延迟后重试（可选，避免快速重试）
+			// Sleep(500); // Windows下需包含 <windows.h>
+		}
+	}
+
+	// 5. 最终清理和结果返回
+	if (fp != NULL) {
+		fclose(fp);
+	}
+
+	if (rtn == 1) {
+		printf("Success: Play data inserted (ID: %ld)\n", data->id);
+		return 1; // 成功返回1
+	}
+	else {
+		printf("Error: Failed to insert play data after 3 retries!\n");
+		return 0; // 失败返回0
+	}
 }
 //更新剧目
 int Play_Perst_Updata(const play_t* data) {

@@ -23,10 +23,10 @@ static const int STUDIO_PAGE_SIZE = 5;
 #include <stdio.h>
 
 /*
-��ʶ����TTMS_SCU_Studio_UI_MgtEnt 
-�������ܣ����������ݳ�������ں�������ʾ��ǰ���ݳ������ݣ����ṩ�ݳ����������ӡ��޸ļ�ɾ�����ܲ�������ڡ�
-����˵�����ޡ�
-�� �� ֵ���ޡ�
+函数名称：TTMS_SCU_Studio_Perst_SelAll
+函数功能：从文件中读取所有演出数据到链表。
+函数说明：list 为 studio_list_t 类型指针，指向数据链表的头指针。
+返回值：成功时返回 1，并返回链表的节点数量
 */
 void Studio_UI_MgtEntry(void) {
 	int i, id;
@@ -129,10 +129,10 @@ void Studio_UI_MgtEntry(void) {
 }
 
 /*
-��ʶ����TTMS_SCU_Studio_UI_Add 
-�������ܣ�������ϵͳ������һ�����ݳ������ݡ�
-����˵�����ޡ�
-�� �� ֵ�����ͣ��ɹ��������ݳ����ĸ�����
+标识说明TTMS_SCU_Studio_UI_Add
+功能描述：向系统中添加一个新的数据字典数据。
+参数说明：无。
+返回值：布尔类型，成功返回数据字典的ID值
 */
 int Studio_UI_Add(void) {
 	studio_t rec;
@@ -151,7 +151,7 @@ int Studio_UI_Add(void) {
 		scanf("%d", &(rec.rowsCount));
 		printf("Column Count of Seats:");
 		scanf("%d", &(rec.colsCount));
-		rec.seatsCount = 0;
+		rec.seatsCount = rec.colsCount*rec.rowsCount;
 		printf("=======================================================\n");
 
 		if (Studio_Srv_Add(&rec)) {
@@ -168,10 +168,10 @@ int Studio_UI_Add(void) {
 }
 
 /*
-��ʶ����TTMS_SCU_Studio_UI_Mod
-�������ܣ������޸�ϵͳ���ִ��һ���ݳ������ݡ�
-����˵����idΪ���ͣ�����Ҫ�޸ĵ��ݳ���ID��
-�� �� ֵ�����ͣ���ʾ�Ƿ�ɹ��޸����ݳ����ı�־��
+标识说明TTMS_SCU_Studio_UI_Mod
+函数功能：用于修改系统中某一数据字典的数据。
+参数说明：id为输入参数，表示要修改的数据字典ID。
+返回值：输出参数，表示是否成功修改数据字典的标志。
 */
 int Studio_UI_Modify(int id) {
 	studio_t rec;
@@ -229,17 +229,17 @@ int Studio_UI_Modify(int id) {
 }
 
 /*
-��ʶ����TTMS_SCU_Studio_UI_Del
-�������ܣ�����ɾ��ϵͳ���ִ��һ���ݳ������ݡ�
-����˵����idΪ���ͣ�����Ҫɾ�����ݳ���ID��
-�� �� ֵ�����ͣ���ʾ�Ƿ�ɹ�ɾ�����ݳ����ı�־��
+标识说明TTMS_SCU_Studio_UI_Del
+函数功能：用于删除系统中指定的一条数据记录。
+参数说明：id为整数，代表要删除的数据记录ID。
+返回值：整数，表示是否成功删除数据记录的标志。
 */
 int Studio_UI_Delete(int id) {
 
 	int rtn = 0;
 
 	if (Studio_Srv_DeleteByID(id)) {
-		//��ɾ����ӳ��ʱ��ͬʱ���ݷ�ӳ��idɾ����λ�ļ��е���λ
+		//删除任务调度时间同时根据调度id删除对应文件夹中的对应文件
 		if (Seat_Srv_DeleteAllByRoomID(id))
 			printf("The seats of the room deleted successfully!\n");
 		printf(

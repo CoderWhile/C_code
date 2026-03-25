@@ -120,14 +120,14 @@ void Sale_UI_MgtEntry()
             break;
 
         case 'F': // �����ƹ��˾�Ŀ
-            Play_UI_FetchByName(); // ���ð����Ʋ�ѯ����
+            Play_UI_UFetchByName(); // ���ð����Ʋ�ѯ����
             // ���¼����ҳ
             paging.totalRecords = Play_Srv_FetchAll(head);
             Paging_Locate_FirstPage(head, paging);
             break;
 
         case 'S': // ������Ŀ����F�߼����룬�ɸ������������
-            Play_UI_FetchByName();
+            Play_UI_UFetchByName();
             paging.totalRecords = Play_Srv_FetchAll(head);
             Paging_Locate_FirstPage(head, paging);
             break;
@@ -179,7 +179,7 @@ void Sale_UI_ShowScheduler(int playID)
     List_Init(sch_head, schedule_node_t);
     paging.offset = 0;
     paging.pageSize = SALESANALYSIS_PAGE_SIZE;
-    paging.totalRecords = Schedule_Srv_FetchByPlay(playID, sch_head);
+    paging.totalRecords = Schedule_Srv_FetchByPlay(sch_head, playID);
 
     if (paging.totalRecords == 0) {
         printf("\nThere are currently no performance plans for this play.\n");
@@ -250,8 +250,8 @@ void Sale_UI_ShowScheduler(int playID)
                 List_Init(ticket_head, ticket_node_t);
 
                 // ���ظó��ε���λ��Ʊ����
-                Seat_Srv_FetchValidByRoomID(sch_buf.studio_id, seat_head);
-                Ticket_Srv_FetchBySchID(tmp_sch_id, ticket_head);
+                Seat_Srv_FetchValidByRoomID(seat_head,sch_buf.studio_id);
+                Ticket_Srv_FetchBySchID(ticket_head,tmp_sch_id);
 
                 // ������Ʊ����
                 Sale_UI_SellTicket(ticket_head, seat_head);
@@ -267,6 +267,7 @@ void Sale_UI_ShowScheduler(int playID)
             break;
         case 'R':
             printf("\nReturn the list of plays....\n");
+            system("pause");
             break;
         default:
             printf("\nInvalid operation\n");
@@ -347,7 +348,7 @@ void Sale_UI_ReturnTicket()
     sale_t sale;          // ���ۼ�¼��������Ľṹ�嶨�壩
     int ticket_id;
 
-    printf("This seat has been sold.\n");
+    //printf("This seat has been sold.\n");
     scanf("%d", &ticket_id);
 
     // c) ����ID���Ҷ�Ӧ��Ʊ
@@ -367,8 +368,8 @@ void Sale_UI_ReturnTicket()
 
     Ticket_Srv_Modify(&ticket);
 
-    // f) �������ۼ�¼sale���ϸ�����Ľṹ�帳ֵ��
-    // �������л�ȡ��ǰ���ڡ�ʱ�䡢��ƱԱID�ĺ���
+    //f) 根据销售明细记录构建索引值
+// 需要获取当前的日期、时间、收银员 ID 和编号
     sale.id = 0; // �¶�������ΨһID���ɵ���ID���ɺ�����
     sale.user_id = 1; // ʾ����ƱԱID��ʵ�ʿɴӵ�¼��Ϣ��ȡ
     sale.ticket_id = ticket.id;

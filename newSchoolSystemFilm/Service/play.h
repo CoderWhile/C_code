@@ -53,3 +53,4 @@ int Play_Srv_Add(play_t* data);
 int Play_Srv_Modify(const play_t* data);
 int Play_Srv_DeleteByID(int id);
 int Play_Srv_FetchByID(int id, play_t* buf);
+void Play_UI_UFetchByName();

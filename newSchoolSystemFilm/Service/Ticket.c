@@ -19,16 +19,16 @@ void Ticket_Srv_GenBatch(int schedule_id, int stuID) {
 
     seat_list_t seat_head = NULL;//初始化链表，存储有效座位的
     int count = 0;
-
+    List_Init(seat_head, seat_node_t);
     // 获取有效座位链表
-    if (Seat_Srv_FetchValidByRoomID(&seat_head, stuID) != 1) {
-        printf("获取有效座位失败！\n");
+    if (Seat_Srv_FetchValidByRoomID(seat_head, stuID) == 0) {
+        printf("Failed to obtain valid seats!\n");
         return -1;
     }
 
     // 统计有效座位数（可选，用于验证）
-    seat_list_t p = seat_head;
-    while (p != NULL) {
+    seat_list_t p = seat_head->next;
+    while (p != seat_head) {
         count++;
         p = p->next;
     }

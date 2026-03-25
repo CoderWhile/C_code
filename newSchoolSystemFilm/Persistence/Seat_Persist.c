@@ -2,21 +2,23 @@
 
 /*
 * Copyright(C), 2007-2008, XUPT Univ.
-* 用例编号：TTMS_UC_02	 
-* File name: Seat.h	  
-* Description : 设置座位用例持久化层	
-* Author:   XUPT  		 
-* Version:  v.1 	 
-* Date: 	2015年4月22日	
+* 用例编号：TTMS_UC_02
+* File name: Seat.h
+* Description : 设置座位用例持久化层
+* Author:   XUPT
+* Version:  v.1
+* Date: 	2015年4月22日
 */
 
 #include "Seat_Persist.h"
 #include "../Service/Seat.h"
 #include "../Common/List.h"
 #include <stdlib.h>
+#include"../Persistence/EntityKey_Persist.h"
 #include <stdio.h>
 //#include<unistd.h>
 #include <assert.h>
+#include<string.h>
 
 static const char SEAT_DATA_FILE[] = "Seat.dat";
 static const char SEAT_DATA_TEMP_FILE[] = "SeatTmp.dat";
@@ -28,8 +30,8 @@ static const char SEAT_KEY_NAME[] = "Seat";
 函数功能：用于向文件中添加一个新座位数据。
 参数说明：data为seat_t类型指针，表示需要添加的座位数据结点。
 返 回 值：整型，表示是否成功添加了座位的标志。
-*/ 
-int Seat_Perst_Insert(seat_t *data) {  
+*/
+int Seat_Perst_Insert(seat_t* data) {
 	assert(NULL != data);
 
 	long key = EntKey_Perst_GetNewKeys(SEAT_KEY_NAME, 1); //为座位分配获取
@@ -47,9 +49,10 @@ int Seat_Perst_Insert(seat_t *data) {
 
 	rtn = fwrite(data, sizeof(seat_t), 1, fp);
 
+
 	fclose(fp);
 	return rtn;
-	assert(NULL!=data);
+	assert(NULL != data);
 	return 0;
 }
 
@@ -107,7 +110,7 @@ int Seat_Perst_InsertBatch(seat_list_t list) {
 参数说明：data为seat_t类型指针，表示需要更新的座位数据结点。
 返 回 值：整型，表示是否成功更新了座位的标志。
 */
-int Seat_Perst_Update(const seat_t *seatdata) {
+int Seat_Perst_Update(const seat_t* seatdata) {
 	assert(NULL != seatdata);
 
 	FILE* fp = fopen(SEAT_DATA_FILE, "rb+");
@@ -138,7 +141,7 @@ int Seat_Perst_Update(const seat_t *seatdata) {
 /*
 识符：TTMS_SCU_Seat_Perst_DelByID
 函数功能：用于从文件中删除一个座位的数据。
-参数说明：参数ID为整型，表示需要删除的座位ID。 
+参数说明：参数ID为整型，表示需要删除的座位ID。
 返 回 值：整型，表示是否成功删除了座位的标志。
 */
 int Seat_Perst_DeleteByID(int ID) {
@@ -188,9 +191,9 @@ int Seat_Perst_DeleteByID(int ID) {
 /*
 标识符：TTMS_SCU_Seat_Perst_DelAllByID
 函数功能：根据编号用于从文件中删除座位数据。
-参数说明：参数roomID为整型，表示演出厅ID。 
+参数说明：参数roomID为整型，表示演出厅ID。
 返 回 值：整型，表示是否成功删除了座位的标志。
-*/ 
+*/
 int Seat_Perst_DeleteAllByRoomID(int roomID) {
 	//将原始文件重命名，然后读取数据重新写入到数据文件中，并将要删除的实体过滤掉。
 
@@ -234,7 +237,7 @@ int Seat_Perst_DeleteAllByRoomID(int roomID) {
 参数说明：第一个参数ID为整型，表示需要载入数据的座位ID；第二个参数buf为seat_t指针，指向载入座位数据的指针。
 返 回 值：整型，表示是否成功载入了座位的标志。
 */
-int Seat_Perst_SelectByID(int ID, seat_t *buf) {
+int Seat_Perst_SelectByID(int ID, seat_t* buf) {
 	assert(NULL != buf);
 
 	FILE* fp = fopen(SEAT_DATA_FILE, "rb");
@@ -305,7 +308,7 @@ int Seat_Perst_SelectAll(seat_list_t list) {
 */
 int Seat_Perst_SelectByRoomID(seat_list_t list, int roomID) {
 	seat_node_t* newNode;
-	seat_t data;
+	seat_t data;       
 	int recCount = 0;
 
 	assert(NULL != list);
@@ -313,7 +316,7 @@ int Seat_Perst_SelectByRoomID(seat_list_t list, int roomID) {
 	List_Free(list, seat_node_t);
 
 	FILE* fp = fopen(SEAT_DATA_FILE, "rb");
-	if (NULL == fp) { //文件不存在
+	if (NULL == fp) {
 		return 0;
 	}
 
@@ -332,6 +335,7 @@ int Seat_Perst_SelectByRoomID(seat_list_t list, int roomID) {
 			}
 		}
 	}
+	
 	fclose(fp);
 	return recCount;
 }

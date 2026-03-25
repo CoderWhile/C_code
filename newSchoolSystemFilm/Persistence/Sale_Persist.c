@@ -11,7 +11,6 @@
 #include <stdio.h>
 //#include<unistd.h>
 #include <assert.h>
-#include "../common/list.h"
 
 
 static const char SALE_DATA_FILE[] = "Sale.dat"; //演出厅文件名常量 

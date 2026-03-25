@@ -16,6 +16,7 @@
 #include <string.h>
 #include"../Common/List.h"
 #include"../Persistence/EntityKey_Persist.h"
+#include"../Persistence/Play_Persist.h"
 
 static const char TICKET_DATA_FILE[] = "Ticket.dat"; //ÑÝ³öÌüÎÄ¼þÃû³£Á¿ 
 static const char TICKET_DATA_TEMP_FILE[] = "TicketTmp.dat"; //ÑÝ³öÌüÁÙÊ±ÎÄ¼þÃû³£Á¿ 
@@ -81,12 +82,7 @@ int Ticket_Perst_Insert(int schedule_id, seat_list_t list) {//¸ù¾Ý³¡´Îid,×ùÎ»Á´±
     }
     long key = EntKey_Perst_GetNewKeys(TICKET_KEY_NAME, count); //
 
-    int* keys = (int*)malloc(count * sizeof(int));//¶¯Ì¬ÉêÇëÄÚ´æ£¬´æÒ»ÅúÐÂÆ±ºÅ
-    if (keys) {
-        free(keys);//ÊÍ·ÅÄÚ´æ
-        fclose(fp);
-        return -1;
-    }
+   
 
     //  ±éÀú×ùÎ»Á´±í£¬¹¹Ôì²¢Ð´ÈëÆ±Êý¾Ý
     p = list->next;//ÖØÐÂ»Øµ½Á´±íÍ·
@@ -94,7 +90,9 @@ int Ticket_Perst_Insert(int schedule_id, seat_list_t list) {//¸ù¾Ý³¡´Îid,×ùÎ»Á´±
     int key_idx = 0;//Ö÷¼üÊý×éÏÂ±ê£¬´Ó0¿ªÊ¼
     while (p != list) {
         ticket_t data;
-        data.id = keys;//¸øÆ±¸³Öµid£¬ÏÂ±êºóÒÆ
+        long key = EntKey_Perst_GetNewKeys(TICKET_KEY_NAME, count); //
+
+        data.id = key;//¸øÆ±¸³Öµid£¬ÏÂ±êºóÒÆ
         data.schedule_id = schedule_id;//°ó¶¨³¡´Îid
         data.seat_id = p->data.id;//°ó¶¨×ùÎ»id
         // 
@@ -103,10 +101,9 @@ int Ticket_Perst_Insert(int schedule_id, seat_list_t list) {//¸ù¾Ý³¡´Îid,×ùÎ»Á´±
 
         rtn = fwrite(&data, sizeof(ticket_t), 1, fp);//°ÑÕâÕÅÆ±Ð´ÈëÎÄ¼þ
         p = p->next;//ÏÂÒ»¸ö×ùÎ»
-        keys++;
     }
 
-    free(keys);
+    //free(keys);
     // ¹Ø±ÕÎÄ¼þ²¢·µ»Ø
     fclose(fp);
     return rtn >= 0 ? count : -1;

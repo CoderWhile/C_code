@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-// 修改参数为指针的指针，让外部能拿到链表头
+// //修改参数为指针的指针，让外部能拿到链表头
 //int Schedule_Perst_SelectAll(query_schedule_list_t* list) {
 //    int recCount = 0;
 //    FILE* fp = NULL;
@@ -50,7 +50,7 @@
 //    fclose(fp);
 //    return recCount;
 //}
-// 根据名称载入剧目（与头文件类型匹配）
+// //根据名称载入剧目（与头文件类型匹配）
 //int Play_Perst_SelectByName(const char* condt, play_t* play) {
 //    int recCount = 0;
 //    FILE* fp = NULL;

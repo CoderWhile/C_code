@@ -1,8 +1,13 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <stdlib.h>
 #include "../Service/ShowQuery.h"
 #include "../Service/ShowPlan.h"
+#include"../Service/Ticket.h"
+#include "../View/Ticket_UI.h"
+#include "../Common/common.h"
+#include "../Service/play.h"
+#include"../Service/Studio.h"
 
 static void ClearScreen() {
 #ifdef _WIN32
@@ -13,7 +18,7 @@ static void ClearScreen() {
 }
 
 static void Pause() {
-    printf("\n按回车键继续...");
+    printf("\nPress Enter to continue....");
     getchar();
     getchar();
 }
@@ -21,94 +26,106 @@ static void Pause() {
 void Schedule_UI_MgtEntry(int play_id) {
     int choice;
     schedule_list_t list = NULL;
-    int count = Schedule_Srv_FetchByPlay(&list, play_id);
+    List_Init(list, schedule_node_t)
+    int count = Schedule_Srv_FetchByPlay(list, play_id);
 
     while (1) {
         ClearScreen();
-        printf("==================== 剧目ID:%d 演出计划管理 ====================\n", play_id);
-        printf("当前演出计划列表：\n");
+        int count = Schedule_Srv_FetchByPlay(list, play_id);
+
+        printf("==================== Repertoire ID: %d Performance Schedule Management ====================\n", play_id);
+        printf("Current performance schedule list：\n");
         printf("------------------------------------------------------------\n");
 
         if (count == 0) {
-            printf("  暂无关联演出计划！\n");
+            printf("There are no related performance plans yet.\n");
         }
         else {
-            schedule_node_t* p = list;
-            while (p != NULL) {
-                printf("  演出ID:%d | 剧目ID:%d | 演出厅ID:%d | 座位数:%d\n",
-                    p->data.id, p->data.play_id, p->data.studio_id, p->data.seat_count);
+            schedule_node_t* p = list->next;
+            while (p != list) {
+                printf("Performance ID: %d | Play ID: %d | studio ID: %d | Number of seats: %d |date:%d-%d-%d |time:%d %d\n",
+                    p->data.id, p->data.play_id, p->data.studio_id, p->data.seat_count,p->data.date.year, p->data.date.month, p->data.date.day, p->data.time.hour,p->data.time.minute );
                 p = p->next;
             }
         }
         printf("------------------------------------------------------------\n");
-        printf("  1. 新增演出计划\n");
-        printf("  2. 修改演出计划\n");
-        printf("  3. 删除演出计划\n");
-        printf("  0. 返回上级菜单\n");
+        printf("  1. Newly added performance plan\n");
+        printf("  2. Modify the performance plan\n");
+        printf("  3. Delete the performance plan\n");
+        printf("  4. Search the performance plan\n");
+
+        printf("  0. Return to the previous menu\n");
         printf("============================================================\n");
         printf("");
         scanf("%d", &choice);
 
         switch (choice) {
         case 1: {
-            schedule_t new_sch;
-            printf("\n請輸入新演出計劃信息\n");
-            printf("演出id："); scanf("%d", &(new_sch.id));
-            new_sch.play_id = play_id;
-            printf("演出聼id："); scanf("%d", &(new_sch.studio_id));
-            printf("座位數："); scanf("%d", &(new_sch.seat_count));
 
-            if (Schedule_Srv_Add(&new_sch)) {
-                printf("新增成功！\n");
-                list = NULL;
-                count = Schedule_Srv_FetchByPlay(&list, play_id);
+            if (Schedule_UI_Add(play_id))
+            {
+                printf("add successfully\n");
             }
             else {
-                printf("新增失敗！\n");
+                printf("add failed！\n");
             }
             break;
         }
         case 2: {
             int sch_id;
-            printf("\n请输入要修改的演出ID：");
+            printf("\nPlease enter the performance ID to be modified：");
             scanf("%d", &sch_id);
 
             schedule_t mod_sch;
-            printf("请输入修改后的信息：\n");
+            printf("Please enter the revised information：\n");
             mod_sch.id = sch_id;
             mod_sch.play_id = play_id;
-            printf("  演出厅ID："); scanf("%d", &mod_sch.studio_id);
-            printf("  座位数："); scanf("%d", &mod_sch.seat_count);
+            printf(" studioID:"); scanf("%d", &mod_sch.studio_id);
+            printf(" seat_count:"); scanf("%d", &mod_sch.seat_count);
 
             if (Schedule_Srv_Modify(&mod_sch)) {
-                printf("  修改成功！\n");
+                printf("modify successfully！\n");
                 list = NULL;
                 count = Schedule_Srv_FetchByPlay(&list, play_id);
             }
             else {
-                printf("  修改失败（未找到该演出ID）！\n");
+                printf("Modification failed (the performance ID was not found)！\n");
             }
             break;
         }
         case 3: {
             int sch_id;
-            printf("\n请输入要删除的演出ID：");
+            printf("\nPlease enter the performance ID to be deleted：");
             scanf("%d", &sch_id);
 
             if (Schedule_Srv_DeleteByID(sch_id)) {
-                printf("  删除成功！\n");
+                printf("Deletion successful！\n");
                 list = NULL;
                 count = Schedule_Srv_FetchByPlay(&list, play_id);
             }
             else {
-                printf("  删除失败（未找到该演出ID）！\n");
+                printf("Deletion failed (the performance ID was not found)！\n");
+            }
+            break;
+        }
+        case 4: {
+            int sch_id;
+            printf("\nPlease enter the performance ID to be search:");
+            scanf("%d", &sch_id);
+            schedule_t pos;
+            if (Schedule_Srv_FetchByID(sch_id,&pos)) {
+                printf("Find successful！\n");
+                Ticket_UI_MgtEntry(pos.id);
+            }
+            else {
+                printf("Deletion failed (the performance ID was not found)！\n");
             }
             break;
         }
         case 0:
             return;
         default:
-            printf("  输入错误，请重新选择！\n");
+            printf("Input error, please select again!\n");
         }
         Pause();
     }
@@ -116,54 +133,70 @@ void Schedule_UI_MgtEntry(int play_id) {
 
 int Schedule_UI_Add(int play_id) {
     schedule_t new_sch;
-    printf("\n==================== 新增演出计划 ====================\n");
+    printf("\n==================== Newly added performance plan ====================\n");
 
-    printf("请输入演出计划ID：");
-    scanf("%d", &new_sch.id);
+  
     new_sch.play_id = play_id;
-    printf("请输入演出厅ID：");
+    printf("Please enter the performance hall ID：");
     scanf("%d", &new_sch.studio_id);
-    printf("请输入座位数：");
-    scanf("%d", &new_sch.seat_count);
+    studio_list_t head;
+    List_Init(head, studio_node_t);
+    Studio_Srv_FetchAll(head);
+    studio_t buf;
+    Studio_Srv_FetchByID(new_sch.studio_id, &buf);
+    //printf("Please enter the seatofcount：");
+    //scanf("%d", &new_sch.seat_count);
+    new_sch.seat_count = buf.seatsCount;
+    printf("Please enter the Release date：");
+    scanf("%d %d %d", &new_sch.date.year, &new_sch.date.month, &new_sch.date.day);
+    printf("Please enter the Show time：");
+    scanf("%d %d %d", &new_sch.time.hour, &new_sch.time.minute, &new_sch.time.second);
 
     int result = Schedule_Srv_Add(&new_sch);
     if (result == 1) {
-        printf("  新演出计划添加成功！\n");
+        printf("The new performance plan has been added successfully.！\n");
+   
     }
     else {
-        printf("  新演出计划添加失败！\n");
+        printf("Failed to add the new performance plan\n");
     }
     return result;
 }
 
 int Schedule_UI_Modify(int id) {
     schedule_t sch;
-    if (!Schedule_Srv_FetchById(&sch, id)) {
-        printf("  未找到ID为%d的演出计划！\n", id);
+    if (!Schedule_Srv_FetchById(&sch,id)) {
+        printf("No performance plan with ID %d found!\n", id);
         return 0;
     }
 
-    printf("\n==================== 修改演出计划 ====================\n");
-    printf("当前演出计划信息：\n");
-    printf("  演出ID：%d\n", sch.id);
-    printf("  剧目ID：%d\n", sch.play_id);
-    printf("  演出厅ID：%d\n", sch.studio_id);
-    printf("  座位数：%d\n", sch.seat_count);
+    printf("\n==================== Revise the performance plan ====================\n");
+    printf("Current performance schedule information：\n");
+    printf("schedule ID：%d\n", sch.id);
+    printf("play ID：%d\n", sch.play_id);
+    printf("studio ID：%d\n", sch.studio_id);
+    printf("count of seat：%d\n", sch.seat_count);
+    printf("Release date：%4d-%2d-%2d\n", sch.date.year, sch.date.month, sch.date.day);
+    printf("Show time：%2d:%2d:%2d\n", sch.time.hour, sch.time.minute, sch.time.second);
     printf("----------------------------------------------------\n");
 
-    printf("请输入新的剧目ID（原：%d）：", sch.play_id);
+    printf("input new play ID（pre：%d）：", sch.play_id);
     scanf("%d", &sch.play_id);
-    printf("请输入新的演出厅ID（原：%d）：", sch.studio_id);
+    printf("input new studio ID（pre：%d）：", sch.studio_id);
     scanf("%d", &sch.studio_id);
-    printf("请输入新的座位数（原：%d）：", sch.seat_count);
+    printf("input new count of seat（pre：%d）：", sch.seat_count);
     scanf("%d", &sch.seat_count);
+    printf("input new Release date（pre：%d %d %d）：", sch.date.year, sch.date.month, sch.date.day);
+    scanf("%d %d %d", &sch.date.year, &sch.date.month, &sch.date.day);
+    printf("input new Show time（pre：%d %d %d）：", sch.time.hour, sch.time.minute, sch.time.second);
+    scanf("%d %d %d", &sch.time.hour, &sch.time.minute, &sch.time.second);
 
     int result = Schedule_Srv_Modify(&sch);
     if (result == 1) {
-        printf("  演出计划修改成功！\n");
+        printf("modify successful！\n");
     }
     else {
-        printf("  演出计划修改失败！\n");
+        printf(" modify faild！\n");
     }
     return result;
 }
@@ -171,29 +204,31 @@ int Schedule_UI_Modify(int id) {
 int Schedule_UI_Delete(int id) {
     schedule_t sch;
     if (!Schedule_Srv_FetchById(&sch, id)) {
-        printf("  未找到ID为%d的演出计划！\n", id);
+        printf("No performance plan with ID %d found！\n", id);
         return 0;
     }
 
-    printf("\n==================== 删除演出计划 ====================\n");
-    printf("你确定要删除以下演出计划吗？\n");
-    printf("  演出ID：%d\n", sch.id);
-    printf("  剧目ID：%d\n", sch.play_id);
-    printf("  演出厅ID：%d\n", sch.studio_id);
-    printf("  座位数：%d\n", sch.seat_count);
+    printf("\n==================== Delete the performance plan ====================\n");
+    printf("Are you sure you want to delete the following performance plan?？\n");
+    printf("schedule ID：%d\n", sch.id);
+    printf("play ID：%d\n", sch.play_id);
+    printf("studiio ID：%d\n", sch.studio_id);
+    printf("count of seat：%d\n", sch.seat_count);
+    printf("Release date：%4d-%2d-%2d\n", sch.date.year, sch.date.month, sch.date.day);
+    printf("Show time：%2d-%2d-%2d\n", sch.time.hour, sch.time.minute, sch.time.second);
     printf("----------------------------------------------------\n");
-    printf("输入 y 确认删除，其他键取消：");
+    printf("Enter 'y' to confirm deletion, enter anything else to cancel : ");
     char confirm;
     scanf(" %c", &confirm);
 
     if (confirm != 'y' && confirm != 'Y') {
-        printf("  已取消删除操作！\n");
+        printf("  The deletion operation has been canceled!\n");
         return 0;
     }
 
     int result = Schedule_Srv_DeleteByID(id);
     if (result == 1) {
-        printf("  演出计划删除成功！\n");
+        printf("  The performance plan has been deleted successfully.\n");
     }
     else {
         printf("  演出计划删除失败！\n");

@@ -6,6 +6,7 @@
 #include"Schedule.h"
 #include"../Service/Seat.h"
 #include"../Service/Ticket.h"
+#include"../Service/ShowPlan.h"
 #include"../common/List.h"
 
 void Ticket_UI_MgtEntry(int schedule_id) {
@@ -15,29 +16,31 @@ void Ticket_UI_MgtEntry(int schedule_id) {
 
     // 调用业务逻辑层获取演出计划信息
     if (!Schedule_Srv_FetchByID(schedule_id, &sch)) {
-        printf("获取演出计划失败！\n");
+        printf("Failed to obtain the performance schedule!\n");
         return;
     }
 
     // 用剧目ID获取剧目信息
     if (!Play_Srv_FetchByID(sch.play_id, &play)) {
-        printf("获取剧目信息失败！\n");
+        printf("Failed to obtain the play information!\n");
         return;
     }
 
     // 在界面显示剧目名称、演出厅编号、演出日期、演出时间
+    printf("===============================================\n");
+    printf("        Details of the performance plan        \n");
+    printf("===============================================\n");
+    printf("PlayID:%d\n", play.id);
+    printf("PlayName:%5s\n", play.name);
+
+    printf("RoomID:%5d\n", sch.studio_id);
+    printf("Release date:%4d-%2d-%2d\n", sch.date.year, sch.date.month, sch.date.day);
+    printf("Show time:%2d:%2d:%2d\n", sch.time.hour, sch.time.minute, sch.time.second);
     printf("=========================================\n");
-    printf("        演出计划详情\n");
-    printf("=========================================\n");
-    printf("剧目名称：%s\n", play.name);
-    printf("演出厅ID：%d\n", sch.studio_id);
-    printf("演出日期：%d-%d-%d\n", sch.date.year, sch.date.month, sch.date.day);
-    printf("演出时间：%d:%d:%d\n", sch.time.hour, sch.time.minute, sch.time.second);
-    printf("=========================================\n");
-    printf("1. 生成演出票\n");
-    printf("2. 重新生成票\n");
-    printf("0. 退出\n");
-    printf("请输入您的选择：\n");
+    printf("1. Generate the tickets\n");
+    printf("2. Regenerate the ticket\n");
+    printf("0. return\n");
+    printf("Please enter your selection:\n");
     scanf_s("%d", &choice);
 
     // 处理用户输入
@@ -53,15 +56,15 @@ void Ticket_UI_MgtEntry(int schedule_id) {
             Ticket_Srv_GenBatch(schedule_id, sch.studio_id);
         }
         else {
-            printf("删除旧票失败，无法重新生成！\n");
+            printf("Failed to delete the old ticket, unable to regenerate!\n");
         }
         break;
     case 0:
         // e退出函数
-        printf("退出演出票管理界面。\n");
+        printf("Exit the performance ticket management interface\n");
         return;
     default:
-        printf("输入错误，请重新选择！\n");
+        printf("Input error, please select again!\n");
     }
 
     // 执行完后跳转到步骤e（退出）
@@ -73,8 +76,13 @@ void Ticket_UI_MgtEntry(int schedule_id) {
 // --------------------------
 void Ticket_UI_Query(void) {
     int ticket_id;
-    ticket_list_t head;
-    List_Init(head, ticket_node_t);
+    ticket_list_t head=NULL;
+    List_Init(head, ticket_node_t);     // 重新初始化
+    if (head == NULL || head->next == head) {
+        printf("无票务记录！\n");
+        return;
+    }
+    Play_Srv_FetchAll(head);
     printf("=========================================\n");
     printf("        查询演出票\n");
     printf("=========================================\n");

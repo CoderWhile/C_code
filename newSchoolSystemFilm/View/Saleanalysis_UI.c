@@ -40,9 +40,9 @@ void SalesAnalysis_UI_MgtEntry() {
         i = 0;
 
         printf("\n=====================================\n");
-        printf("********剧目票房排行榜（第%d/%d页）********\n", currentPage, maxPage);
+        printf("********Repertoire Box Office Ranking(Page %d/%d)********\n", currentPage, maxPage);
         printf("=====================================\n");
-        printf("剧目名称\t区域\t上座数\t票房\t上映日期\t下映日期\n");
+        printf("Title of the play\tarea\ttotaltickets,\tsales\tstart_date\tend_date\n");
         printf("---------------------------------------------------------------------\n");
 
         p = head->next;
@@ -57,11 +57,11 @@ void SalesAnalysis_UI_MgtEntry() {
             p = p->next;
         }
         if (totalRecords == 0) {
-            printf("*************暂无票房数据可显示************\n");
+            printf("*************Repertoire Box Office Ranking (Page %d/%d)************\n");
         }
 
         //接收用户输入的按键字符
-        printf("\n操作提示: p/P-上一页 | n/N-下一页 | r/R-退出\n请输入: ");
+        printf("\n p/P-last page | n/N-next page | r/R-return\nplease input: ");
         scanf(" %c", &choice);
         while (getchar() != '\n'); // 清空输入缓冲区
 
@@ -71,7 +71,7 @@ void SalesAnalysis_UI_MgtEntry() {
                 currentPage--;
             }
             else {
-                printf("\n 已经是第一页！\n");
+                printf("\n It's already the first page.！\n");
             }
         }
         //处理下一页 ('n'/'N')
@@ -80,17 +80,17 @@ void SalesAnalysis_UI_MgtEntry() {
                 currentPage++;
             }
             else {
-                printf("\n 已经是最后一页！\n");
+                printf("\n 已It's already the last page.！\n");
             }
         }
         //处理退出 ('r'/'R')
         else if (choice == 'r' || choice == 'R') {
-            printf("\n正在退出...\n");
+            printf("\nExiting...\n");
             break;
         }
         //无效输入
         else {
-            printf("\n输入无效，请重新选择！\n");
+            printf("\nInvalid input, please select again.！\n");
         }
     }
 

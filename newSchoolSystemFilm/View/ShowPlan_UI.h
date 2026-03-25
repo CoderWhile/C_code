@@ -1,8 +1,8 @@
 #pragma once
 #ifndef SCHEDULE_UI_H_
 #define SCHEDULE_UI_H_
-#include "../ShowPlan.h"
-#include"../List.h"
+#include "../Service/ShowPlan.h"
+#include"../Common/List.h"
 static const int SCHEDULE_PAGE_SIZE = 5;
 
 

@@ -1,13 +1,13 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 
 /*
-* Copyright(C), 2007-2008, XUPT Univ.	 
+* Copyright(C), 2007-2008, XUPT Univ.
 * 用例编号：TTMS_UC_02
-* File name: Seat_UI.c			  
-* Description : 设置座位用例界面层	
-* Author:   XUPT  		 
-* Version:  v.1 	 
-* Date: 	2015年4月22日	
+* File name: Seat_UI.c
+* Description : 设置座位用例界面层
+* Author:   XUPT
+* Version:  v.1
+* Date: 	2015年4月22日
 */
 
 #include "Seat_UI.h"
@@ -36,7 +36,7 @@ static void Seat_Status_To_Str(seat_status_t status, char* str) {
     }
 }
 /*
-表识符：TTMS_SCU_Seat_UI_S2C 
+表识符：TTMS_SCU_Seat_UI_S2C
 函数功能：根据座位状态获取界面显示符号。
 参数说明：status为seat_status_t类型，表示座位状态。
 返 回 值：字符型，表示座位的界面显示符号。
@@ -70,7 +70,7 @@ inline seat_status_t Seat_UI_Char2Status(char statusChar) {
 函数功能：界面层管理座位的入口函数，显示当前的座位数据，并提供座位数据添加、修改、删除功能操作的入口。
 参数说明：roomID为整型，是需要设置座位的演出厅ID。
 返 回 值：无。
-*/ 
+*/
 void Seat_UI_MgtEntry(int roomID) {
     int row, col;
     char choice;
@@ -98,12 +98,12 @@ void Seat_UI_MgtEntry(int roomID) {
         // 分页显示座位数据
         pos = head->next;
         // 跳过当前页之前的记录
-        for (int i = 0; pos != NULL && i < paging.offset; i++) {
+        for (int i = 0; pos != head && i < paging.offset; i++) {
             pos = pos->next;
         }
         // 显示当前页数据
         int showCnt = 0;
-        while (pos != NULL && showCnt < paging.pageSize) {
+        while (pos != head && showCnt < paging.pageSize) {
             char statusStr[20];
             Seat_Status_To_Str(pos->data.status, statusStr);
             printf("%8d  %8d  %8d  %8d  %12s\n",
@@ -263,10 +263,11 @@ int Seat_UI_Add(seat_list_t list, int roomID, int row, int column) {  //输入一个
     newSeat.row = row;  //行
     newSeat.column = column;  //列
     newSeat.status = (seat_status_t)inputStatus;  //座位状态
-
+    seat_node_t* newNode = (seat_node_t*)malloc(sizeof(seat_node_t));
+    newNode->data = newSeat;
     if (Seat_Srv_Add(&newSeat)) {
         //新增成功：同步到链表
-        Seat_Srv_AddToSoftedList(list, &newSeat);
+        Seat_Srv_AddToSoftedList(list, newNode);
         printf("Success: Seat added\n");
         return 1;
     }
@@ -277,7 +278,7 @@ int Seat_UI_Add(seat_list_t list, int roomID, int row, int column) {  //输入一个
 }
 
 /*
-标识符：TTMS_SCU_Seat_UI_Mod 
+标识符：TTMS_SCU_Seat_UI_Mod
 函数功能：用于修改一个座位数据。
 参数说明：第一个参数list为seat_list_t类型指针，指向座位链表头指针，第二个参数rowsCount为整型，表示座位所在行号，第三个参数colsCount为整型，表示座位所在列号。
 返 回 值：整型，表示是否成功修改了座位的标志。
@@ -383,4 +384,3 @@ int Seat_UI_Delete(seat_list_t list, int row, int column) {
     }
 
 }
-
